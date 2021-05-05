@@ -1,8 +1,10 @@
 <template>
   <div id="app">
+    <h1>#todo</h1>
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/">All</router-link> |
+      <router-link to="/active">Active</router-link> |
+      <router-link to="/completed">Completed</router-link>
     </div>
     <router-view/>
   </div>
@@ -18,15 +20,20 @@
 }
 
 #nav {
-  padding: 30px;
+  padding: 2px;
+  display: inline-block;
+  border-bottom: 2px solid grey;
 }
 
 #nav a {
   font-weight: bold;
   color: #2c3e50;
+  text-decoration: none;
+  margin: 0 20px;
 }
 
 #nav a.router-link-exact-active {
   color: #42b983;
+  border-bottom: 4px solid blue;
 }
 </style>
