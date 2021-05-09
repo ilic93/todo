@@ -1,5 +1,6 @@
 <template>
-  <div id="app">
+  <div id="app" class="container">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <h1>#todo</h1>
     <div id="nav">
       <router-link to="/">All</router-link> |
@@ -17,19 +18,22 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  margin-top: 20px;
 }
 
 #nav {
   padding: 2px;
   display: inline-block;
   border-bottom: 2px solid grey;
+  width: 100%;
 }
 
 #nav a {
   font-weight: bold;
   color: #2c3e50;
   text-decoration: none;
-  margin: 0 20px;
+  width: 20%;
+  display: inline-block;
 }
 
 #nav a.router-link-exact-active {
