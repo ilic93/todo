@@ -29,6 +29,7 @@ export default {
   methods: {
     addTask () {
       const task = document.querySelector('input').value
+      if (task === '') return
       const newTask = {
         task,
         done: false
@@ -36,7 +37,6 @@ export default {
       this.taskList.push(newTask)
       localStorage.setItem('taskList', JSON.stringify(this.taskList))
       document.taskForm.reset()
-      console.log(this.taskList)
     },
     checkTask ($event) {
       const index = $event.target.id
